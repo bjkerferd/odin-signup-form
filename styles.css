@@ -1,0 +1,220 @@
+/* CSS Reset */
+/* Trying CSS reset approach from: https://mattbrictson.com/blog/css-normalize-and-reset */
+@import "https://unpkg.com/modern-normalize@2.0.0/modern-normalize.css";
+
+/* * {
+    border: solid red 0.5px;
+} */
+
+:root {
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, figure, p, ol, ul {
+  margin: 0;
+}
+
+ol[role="list"], ul[role="list"] {
+  list-style: none;
+  padding-inline: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+img {
+  display: block;
+  max-inline-size: 100%;
+}
+
+/* Fonts */
+@font-face {
+    font-family: 'norsebold';
+    src: url('assets/Norse/norse-bold-webfont.woff2') format('woff2'),
+         url('assets/Norse/norse-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Formatting */
+#above-the-fold {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.title-pane {
+    flex: 1 1 40vw;
+    min-width: 300px;
+    max-width: 1862px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+
+    background-image: url("assets/leafy-background.avif");
+    background-size: cover;
+    background-position: center center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+}
+
+.title-pane .spacer {
+    height: 25%;
+}
+
+.title-pane .content {
+    /* height: auto; */
+    flex: 1;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-block: 1rem
+}
+
+.title-pane .banner {
+    display: flex;
+    background-color: rgba(3, 3, 3, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.title-pane small a {
+    text-decoration: underline;
+}
+
+.title-pane img {
+    height: 124px;
+    width: auto;
+}
+
+.form-container {
+    flex: 1 1 60vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    background-color: whitesmoke;
+}
+
+.form-container .call-to-action {
+    margin: 2rem;
+    max-width: 56ch;
+}
+
+.form-container .call-to-action p {
+    margin-block: 1rem;
+}
+
+.form-banner {
+    width: 100%;
+    padding: 2rem;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.button-area {
+    padding: 2rem;
+
+}
+
+/* Typography */
+
+.title-pane {
+    color: white;
+}
+
+.title-pane h1 {
+    font-family: "norsebold";
+    font-size: 96px;
+}
+
+.form-container .call-to-action {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: rgb(44, 42, 42);
+}
+
+.form-hype {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgb(44, 42, 42);
+}
+
+.button-area {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(44, 42, 42);
+}
+
+.button-area a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #596D48
+}
+
+.button-area p {
+     margin-top: 2rem;
+}   
+
+/* Button style */
+
+button {
+    padding: 0.8rem 3rem;
+    background-color: #596D48;
+    border: none;
+    border-radius: 0.5rem;
+    color: white;
+    font-weight: bold;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form style */
+form label, 
+form input {
+    display: block;
+}
+
+.form-hype {
+    flex: 1 1 100%
+}
+
+.form-banner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.form-banner > div {
+    flex: 0 0 40%;
+    min-width: 35ch;
+}
+
+.form-banner input {
+    width: 100%;
+    height: 2rem;
+    border: 1px solid #E5E7EB;
+    border-radius: 2px;
+}
+
+.form-banner label {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    color: rgb(44, 42, 42);
+}
+
+form input[type="password"]:invalid {
+    border: 1px solid red;
+}
+
+form input:focus {
+    border: 1px solid blue;
+    box-shadow: 2px 2px 12px rgba(112, 174, 245, 0.418);
+}
