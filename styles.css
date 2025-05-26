@@ -1,8 +1,8 @@
 /* CSS Reset */
 /* Trying CSS reset approach from: https://mattbrictson.com/blog/css-normalize-and-reset */
 @import "https://unpkg.com/modern-normalize@2.0.0/modern-normalize.css";
-
-/* * {
+/* 
+* {
     border: solid red 0.5px;
 } */
 
@@ -181,18 +181,32 @@ form input {
 }
 
 .form-hype {
-    flex: 1 1 100%
+    width: 100%
 }
 
 .form-banner {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 1.5rem;
 }
 
-.form-banner > div {
+.field-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    background-color: transparent;
+    max-width: 90ch;
+}
+
+/* .form-banner > div {
     flex: 0 0 40%;
     min-width: 35ch;
+} */
+
+.field-container > div {
+    min-width: 35ch;
+    max-width: 45ch;
+    flex: 1;
 }
 
 .form-banner input {
